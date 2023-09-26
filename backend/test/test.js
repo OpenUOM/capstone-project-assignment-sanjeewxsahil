@@ -10,7 +10,7 @@ beforeAll(async () => {
 });
 
 /**
- * Reset the database after every test case
+ * Reset the database 
  */
 afterEach(async () => {
   await testBase.resetDatabase(db);
