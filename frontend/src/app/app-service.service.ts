@@ -16,10 +16,10 @@ export class AppServiceService {
       this.ROOT_URL = 'api'
     }
   }
-
-  initializeDB(){
+initializeDB(){
     return this.http.get(`/${this.ROOT_URL}/dbinitialize`)
   }
+
 
   getTeacherData(){
     return this.http.get(`/${this.ROOT_URL}/listTeachers`)
@@ -48,8 +48,7 @@ export class AppServiceService {
   editTeacher(payload: Object){
     return this.http.post(`/${this.ROOT_URL}/editTeacher`, payload)
   }
-
-  editStudent(payload: Object){
+editStudent(payload: Object){
     return this.http.post(`/${this.ROOT_URL}/editStudent`, payload)
   }
 
