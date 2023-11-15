@@ -24,7 +24,8 @@ export class TeacherTableComponent implements OnInit {
   addNewTeacher() {
     this.router.navigate(['addTeacher'])
   }
-editTeacher(id) {
+
+  editTeacher(id) {
     const navigationExtras: NavigationExtras = {
       state: {
         id: id
@@ -49,7 +50,8 @@ editTeacher(id) {
       console.log('ERROR - ', error)
     })
   }
-deleteTeacher(itemid) {
+
+  deleteTeacher(itemid) {
     const test = {
       id: itemid
     }
@@ -74,3 +76,4 @@ deleteTeacher(itemid) {
     }
   }
 }
+  

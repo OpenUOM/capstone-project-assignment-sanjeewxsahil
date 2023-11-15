@@ -21,7 +21,8 @@ export class StudentTableComponent implements OnInit {
   ngOnInit(): void {
     this.getStudentData();
   }
-addNewStudent(){
+
+  addNewStudent(){
     this.router.navigate(['addStudent'])
   }
 
@@ -50,7 +51,8 @@ addNewStudent(){
       console.log('ERROR - ', error)
     })
   }
-deleteStudent(itemid){
+
+  deleteStudent(itemid){
     const student = {
       id: itemid
     }

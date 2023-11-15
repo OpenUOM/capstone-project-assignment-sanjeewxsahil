@@ -21,6 +21,7 @@ const knex_db = require("./db-config");
 const dbinitialize = async () => {
     testBase.resetDatabase(knex_db);
 }
+
 const readTeachers = async () => {
     const sql = `SELECT * FROM teacher`
     return new Promise((resolve, reject) => {
@@ -34,6 +35,7 @@ const readTeachers = async () => {
             });
     });
 }
+
 const readTeacherInfo = async (id) => {
     const sql = `SELECT * FROM teacher WHERE id = ?`
     return new Promise((resolve, reject) => {
@@ -61,6 +63,7 @@ const addTeacher = async (id, name, age) => {
             });
     });
 }
+
 const updateTeacher = async (name, age, id) => {
     const sql = `UPDATE teacher SET name=?, age=? WHERE id=?`
     return new Promise((resolve, reject) => {
@@ -88,6 +91,7 @@ const deleteTeacher = async (id) => {
             });
     });
 }
+
 const readStudents = async () => {
     const sql = `SELECT * FROM student`
     return new Promise((resolve, reject) => {
@@ -115,6 +119,7 @@ const readStudentInfo = async (id) => {
             });
     });
 }
+
 const addStudent = async (id, name, age, hometown) => {
     const sql = `INSERT INTO student(id, name, age, hometown) values (?, ?, ?, ?)`
     return new Promise((resolve, reject) => {
@@ -141,7 +146,8 @@ const updateStudent = async (name, age, hometown, id) => {
                 reject(error);
             });
     });
-}
+} 
+
 const deleteStudent = async (id) => {
     const sql = `DELETE FROM student WHERE id=?`
     return new Promise((resolve, reject) => {
